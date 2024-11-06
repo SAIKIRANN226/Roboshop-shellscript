@@ -42,7 +42,7 @@ dnf install nodejs -y  &>> $LOGFILE
 
 VALIDATE $? "Installing NodeJS:18"
 
-id roboshop #if roboshop user does not exist, then it is failure
+id roboshop # If roboshop user does not exist, then it is failure so automatically exit "set -e" will not work here
 if [ $? -ne 0 ]
 then
     useradd roboshop
